@@ -1,0 +1,113 @@
+:root{
+  --color-primary: #0a3a66; /* deep blue */
+  --color-primary-2: #08345a; /* gradient end */
+  --color-accent: #00a3a3;
+  --color-white: #ffffff;
+  --control-bg: rgba(255,255,255,0.04);
+  --control-border: rgba(255,255,255,0.14);
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* { box-sizing: border-box; margin:0; padding:0; }
+html,body,#root { height:100%; }
+body{
+  font-family: var(--font-family);
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-2) 100%);
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.3;
+}
+
+.container {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 { font-size: clamp(28px, 6.5vw, 48px); font-weight: 800; text-align:center; line-height:1.02; }
+p.lead { text-align:center; opacity:0.95; margin-top:8px; margin-bottom:18px; }
+
+.btn {
+  display:inline-block;
+  background: var(--color-white);
+  color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: 12px 22px;
+  font-weight:700;
+  border: none;
+  cursor:pointer;
+  box-shadow: 0 8px 18px rgba(2,8,20,0.24);
+}
+.input {
+  width:100%;
+  padding: 14px 12px;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--control-border);
+  background: var(--control-bg);
+  color: var(--color-white);
+  outline: none;
+  font-size: 16px;
+}
+.input::placeholder { color: rgba(255,255,255,0.72); }
+
+.form {
+  width:100%;
+  max-width:420px;
+  margin: 0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.center-screen {
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  padding: 28px;
+}
+@media (max-width:480px) {
+  .container { padding: 16px; }
+  .btn { padding: 10px 18px; }
+  .form { padding: 0 8px; }
+}
+
+.logo-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;       
+  background: transparent;    
+  padding: 8px;               
+  box-shadow: none;           
+  border: none;               
+  overflow: visible;
+}
+
+
+.logo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: none; 
+}
+.welcome .logo-wrapper {
+  width: 110px;
+  height: 110px;
+  padding: 12px;
+  border-radius: 16px;
+}
+
+@media (max-width: 480px) {
+  .welcome .logo-wrapper {
+    width: 84px;
+    height: 84px;
+    padding: 10px;
+  }
+}
